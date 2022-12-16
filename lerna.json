@@ -1,0 +1,24 @@
+{
+  "version": "independent",
+  "useWorkspaces": true,
+  "npmClient": "pnpm",
+  "packages": [
+    "packages/*"
+  ],
+  "ignoreChanges": [
+    "**/*.spec.ts",
+    "**/*.cy.ts",
+    "**/__fixtures__",
+    "**/__mocks__",
+    "**/jest.config*.js",
+    "**/.eslintignore"
+  ],
+  "command": {
+    "version": {
+      "message": "chore(release): publish [skip ci]",
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "changelogPreset": "metahub"
+    }
+  }
+}
