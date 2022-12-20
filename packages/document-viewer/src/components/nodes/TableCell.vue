@@ -21,7 +21,7 @@ const { align, parent } = defineProps({
 
 const tag = parent?.section === TableRowSection.header ? 'th' : 'td'
 
-let className
+let className: string
 if (align === TableCellAlign.center) {
   className = 'align-center'
 } else if (align === TableCellAlign.right) {

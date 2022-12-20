@@ -15,7 +15,7 @@ const { section } = defineProps({
   },
 })
 
-let tag
+let tag: string
 if (section === TableRowSection.header) {
   tag = 'thead'
 } else if (section === TableRowSection.body) {
