@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.vue",
+    "**/*.yaml"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
