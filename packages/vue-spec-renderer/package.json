@@ -35,14 +35,9 @@
     "url": "https://github.com/Kong/portal-components/tree/main/packages/vue-spec-renderer"
   },
   "peerDependencies": {
-    "babel-core": "^6.26.3",
-    "mkdirp": "^1.0.4",
-    "prop-types": "^15.8.1",
-    "vite":"^4.0.4",
     "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@types/node":"^18.11.18",
     "@modyfi/vite-plugin-yaml": "^1.0.3"
   },
   "dependencies": {

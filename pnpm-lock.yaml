@@ -41,12 +41,10 @@ importers:
     specifiers:
       '@kong/swagger-ui-web-component': ^1.0.1
       '@modyfi/vite-plugin-yaml': ^1.0.3
-      '@types/node': ^18.11.18
     dependencies:
       '@kong/swagger-ui-web-component': 1.0.1
     devDependencies:
       '@modyfi/vite-plugin-yaml': 1.0.3
-      '@types/node': 18.11.18
 
 packages:
 

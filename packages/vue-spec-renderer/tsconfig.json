@@ -5,8 +5,7 @@
     "declarationDir": "dist/types",
     "types": [
       "node",
-      "vite/client",
-      "@modyfi/vite-plugin-yaml/modules"
+      "vite/client"
     ]
   },
   "include": [

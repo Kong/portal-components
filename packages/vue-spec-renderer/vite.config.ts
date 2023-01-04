@@ -10,9 +10,9 @@ const packageName = 'vue-spec-renderer'
 const config = mergeConfig(sharedViteConfig, defineConfig({
   build: {
     lib: {
-      // The kebab-case name of the exposed global variable. MUST be in the format `kong-ui-{package-name}`
-      // Example: name: 'kong-ui-demo-component'
-      name: `kong-ui-${packageName}`,
+      // The kebab-case name of the exposed global variable. MUST be in the format `portal-{package-name}`
+      // Example: name: 'portal-demo-component'
+      name: `portal-${packageName}`,
       entry: resolve(__dirname, './src/index.ts'),
       fileName: (format) => `${packageName}.${format}.js`,
     },
