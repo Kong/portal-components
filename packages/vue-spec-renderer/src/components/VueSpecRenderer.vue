@@ -5,7 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'vue'
+import registerSwaggerUi from '@kong/swagger-ui-web-component'
+import { PropType, onMounted } from 'vue'
 import { Document } from '../types'
 
 defineProps({
@@ -13,6 +14,10 @@ defineProps({
     type: Object as PropType<Document>,
     required: true
   }
+})
+
+onMounted(() => {
+  registerSwaggerUi()
 })
 </script>
 

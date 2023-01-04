@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "type": "module",
-  "main": "./dist/svue-spec-renderer.umd.js",
+  "main": "./dist/vue-spec-renderer.umd.js",
   "module": "./dist/vue-spec-renderer.es.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
@@ -38,14 +38,17 @@
     "babel-core": "^6.26.3",
     "mkdirp": "^1.0.4",
     "prop-types": "^15.8.1",
-    "postcss":"^8.4.20",
     "vite":"^4.0.4",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@types/node":"^18.11.18",
     "@modyfi/vite-plugin-yaml": "^1.0.3"
   },
   "dependencies": {
     "@kong/swagger-ui-web-component": "^1.0.1"
+  },
+  "volta": {
+    "node": "18.12.1"
   }
 }
