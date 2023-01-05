@@ -1,13 +1,12 @@
 {
-  "name": "@kong/portal-document-viewer",
+  "name": "@kong/portal-vue-spec-renderer",
   "version": "0.0.1-beta.0",
   "description": "",
   "type": "module",
-  "main": "./dist/document-viewer.umd.js",
-  "module": "./dist/document-viewer.es.js",
+  "main": "./dist/vue-spec-renderer.umd.js",
+  "module": "./dist/vue-spec-renderer.es.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env USE_SANDBOX=true vite",
     "build": "run-s typecheck build:package build:types",
     "build:package": "vite build",
@@ -23,7 +22,6 @@
     "test:unit": "cross-env FORCE_COLOR=1 vitest run",
     "test:unit:open": "cross-env FORCE_COLOR=1 vitest --ui"
   },
-  "keywords": [],
   "author": {
     "name": "Kong Inc.",
     "url": "https://konghq.com"
@@ -33,9 +31,18 @@
     "url": "https://github.com/Kong/portal-components/issues"
   },
   "repository": {
-    "url": "https://github.com/Kong/portal-components/tree/main/packages/document-viewer"
+    "url": "https://github.com/Kong/portal-components/tree/main/packages/vue-spec-renderer"
   },
   "peerDependencies": {
     "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@modyfi/vite-plugin-yaml": "^1.0.3"
+  },
+  "dependencies": {
+    "@kong/swagger-ui-web-component": "^1.0.2"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

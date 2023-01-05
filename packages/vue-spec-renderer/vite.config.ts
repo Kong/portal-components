@@ -1,9 +1,10 @@
+import ViteYaml from '@modyfi/vite-plugin-yaml';
 import sharedViteConfig from '../../vite.config.shared'
 import { resolve } from 'path'
 import { defineConfig, mergeConfig } from 'vite'
 
 // Package name MUST always match the kebab-case package name inside the component's package.json file and the name of your `/packages/{package-name}` directory
-const packageName = 'document-viewer'
+const packageName = 'vue-spec-renderer'
 
 // Merge the shared Vite config with the local one defined below
 const config = mergeConfig(sharedViteConfig, defineConfig({
@@ -16,6 +17,9 @@ const config = mergeConfig(sharedViteConfig, defineConfig({
       fileName: (format) => `${packageName}.${format}.js`,
     },
   },
+  plugins: [
+    ViteYaml(), // you may configure the plugin by passing in an object with the options listed below
+  ],
 }))
 
 // If we are trying to preview a build of the local `package/copy-uuid/sandbox` directory,
