@@ -22,7 +22,6 @@
     "test:unit": "cross-env FORCE_COLOR=1 vitest run",
     "test:unit:open": "cross-env FORCE_COLOR=1 vitest --ui"
   },
-  "keywords": [],
   "author": {
     "name": "Kong Inc.",
     "url": "https://konghq.com"
@@ -44,6 +43,6 @@
     "@kong/swagger-ui-web-component": "^1.0.2"
   },
   "volta": {
-    "node": "18.12.1"
+    "extends": "../../package.json"
   }
 }
