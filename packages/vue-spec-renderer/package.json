@@ -41,7 +41,7 @@
     "@modyfi/vite-plugin-yaml": "^1.0.3"
   },
   "dependencies": {
-    "@kong/swagger-ui-web-component": "^1.0.1"
+    "@kong/swagger-ui-web-component": "^1.0.2"
   },
   "volta": {
     "node": "18.12.1"

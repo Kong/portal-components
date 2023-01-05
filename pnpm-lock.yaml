@@ -41,10 +41,10 @@ importers:
 
   packages/vue-spec-renderer:
     specifiers:
-      '@kong/swagger-ui-web-component': ^1.0.1
+      '@kong/swagger-ui-web-component': ^1.0.2
       '@modyfi/vite-plugin-yaml': ^1.0.3
     dependencies:
-      '@kong/swagger-ui-web-component': 1.0.1
+      '@kong/swagger-ui-web-component': 1.0.2
     devDependencies:
       '@modyfi/vite-plugin-yaml': 1.0.3
 
@@ -615,8 +615,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@kong/swagger-ui-web-component/1.0.1:
-    resolution: {integrity: sha512-280yFLitfqEc9LF/fKD03/gvhbs7sbl9Nf9O2ZfMDFhpXfqbflGHU5UEw6J4fowHc1zR2gtWs5v7RjK0ZrEvWg==}
+  /@kong/swagger-ui-web-component/1.0.2:
+    resolution: {integrity: sha512-VZk4fwyF4v1evLFIcZyB7ezP1S6PG/WkH8RWKOD5Npw++4nnFhUJx3vFhi5uRAbctXX6uhdChfsVc9dtDOWpdw==}
     dependencies:
       '@kong/swagger-ui-kong-theme': github.com/kong/swagger-ui-kong-theme/b82e307dd3c07801b9375d8cdd3879d8a661b645_sfoxds7t5ydpegc3knd667wn6m
       react: 17.0.2
