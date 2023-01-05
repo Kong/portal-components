@@ -10,7 +10,9 @@
 </template>
 
 <script setup lang="ts">
+// @ts-ignore
 import yamlContent from './test.yaml'
+import VueSpecRenderer from '../src'
 
 const defaultDocument = yamlContent
 </script>

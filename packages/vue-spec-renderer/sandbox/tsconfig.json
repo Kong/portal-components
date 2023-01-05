@@ -5,8 +5,7 @@
   },
   "include": [
     "**/*.ts",
-    "**/*.vue",
-    "**/*.yaml"
+    "**/*.vue"
   ],
   "exclude": [
     "node_modules"
