@@ -1,11 +1,14 @@
 {
   "name": "@kong/portal-vue-spec-renderer",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": "",
   "type": "module",
   "main": "./dist/vue-spec-renderer.umd.js",
   "module": "./dist/vue-spec-renderer.es.js",
   "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "cross-env USE_SANDBOX=true vite",
     "build": "run-s typecheck build:package build:types",
