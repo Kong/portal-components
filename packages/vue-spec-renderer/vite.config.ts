@@ -1,4 +1,5 @@
-import ViteYaml from '@modyfi/vite-plugin-yaml';
+import vue from '@vitejs/plugin-vue'
+import ViteYaml from '@modyfi/vite-plugin-yaml'
 import sharedViteConfig from '../../vite.config.shared'
 import { resolve } from 'path'
 import { defineConfig, mergeConfig } from 'vite'
@@ -18,6 +19,13 @@ const config = mergeConfig(sharedViteConfig, defineConfig({
     },
   },
   plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => ['kong-swagger-ui'].includes(tag)
+        }
+      }
+    }),
     ViteYaml(), // you may configure the plugin by passing in an object with the options listed below
   ],
 }))
