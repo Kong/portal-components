@@ -1,21 +1,35 @@
 <template>
   <div class="kong-portal-vue-spec-renderer">
-    <kong-swagger-ui v-if="document" :spec="document" :has-sidebar="hasSidebar" :essentials-only="essentialsOnly"></kong-swagger-ui>
-    <div v-else>Error: No document spec provided</div>
+    <kong-swagger-ui
+      v-if="hasRequiredProps"
+      :url="url"
+      :spec="document"
+      :has-sidebar="hasSidebar"
+      :essentials-only="essentialsOnly"
+    >
+    </kong-swagger-ui>
+    <div
+      v-else
+      data-testid="kong-portal-vue-spec-renderer-error"
+    >
+      Error: No document spec provided
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import '@kong/swagger-ui-web-component'
-import { PropType } from 'vue'
+import { PropType, computed } from 'vue'
 import { Document } from '../types'
 
-// TODO: add prop for url
-
-defineProps({
+const props  = defineProps({
   document: {
     type: Object as PropType<Document>,
-    required: true
+    default: null
+  },
+  url: {
+    type: String,
+    default: ''
   },
   hasSidebar: {
     type: Boolean,
@@ -25,6 +39,10 @@ defineProps({
     type: Boolean,
     default: false
   }
+})
+
+const hasRequiredProps = computed((): boolean => {
+  return !!(props.document || props.url)
 })
 </script>
 
