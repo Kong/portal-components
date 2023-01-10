@@ -1,9 +1,13 @@
 <template>
-  <div class="sandbox-container">
+  <div class="vue-spec-renderer-sandbox sandbox-container">
     <main>
       <div>
-        <h3>Default</h3>
-        <VueSpecRenderer :document="defaultDocument" />
+        <h1>✨✨ Awesome VueSpecRenderer ✨✨</h1>
+        <VueSpecRenderer
+          :document="defaultDocument"
+          :has-sidebar="false"
+          :essentials-only="true"
+        />
       </div>
     </main>
   </div>
@@ -16,3 +20,11 @@ import VueSpecRenderer from '../src'
 
 const defaultDocument = yamlContent
 </script>
+
+<style lang="scss" scoped>
+.vue-spec-renderer-sandbox {
+  h1 {
+    text-align: center;
+  }
+}
+</style>
