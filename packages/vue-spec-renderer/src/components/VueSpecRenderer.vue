@@ -6,6 +6,7 @@
       :spec="document"
       :has-sidebar="hasSidebar"
       :essentials-only="essentialsOnly"
+      :slim-mode="slimMode"
     >
     </kong-swagger-ui>
     <div
@@ -36,6 +37,10 @@ const props  = defineProps({
     default: true
   },
   essentialsOnly: {
+    type: Boolean,
+    default: false
+  },
+  slimMode: {
     type: Boolean,
     default: false
   }

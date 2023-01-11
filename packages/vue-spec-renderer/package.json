@@ -1,6 +1,6 @@
 {
   "name": "@kong/portal-vue-spec-renderer",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "description": "",
   "type": "module",
   "main": "./dist/vue-spec-renderer.umd.js",
@@ -43,7 +43,7 @@
     "@modyfi/vite-plugin-yaml": "^1.0.3"
   },
   "dependencies": {
-    "@kong/swagger-ui-web-component": "^1.0.5"
+    "@kong/swagger-ui-web-component": "^1.0.6"
   },
   "volta": {
     "extends": "../../package.json"
