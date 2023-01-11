@@ -40,6 +40,7 @@ You can register `portal-vue-spec-renderer` globally or locally.
 // Global registration
 import { createApp } from 'vue'
 import VueSpecRenderer from '@kong/portal-vue-spec-renderer'
+import '@kong/portal-vue-spec-renderer/dist/style.css'
 
 const app = createApp(App)
 
@@ -54,7 +55,7 @@ app.use(VueSpecRenderer)
 </template>
 
 <script setup lang="ts">
-import { VueSpecRenderer } from '@kong/portal-vue-spec-renderer'
+import VueSpecRenderer from '@kong/portal-vue-spec-renderer'
 </script>
 ```
 
