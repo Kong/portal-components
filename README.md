@@ -67,7 +67,7 @@ pnpm --filter "@kong/portal-{package-name}" run typecheck
 
 You are modifying a shared component (let's say `@kong/portal-document-viewer`) and you need to run 
 a consuming application (e.g. `konnect-portal`) with the current version of the code you have locally in your 
-`packages/document-viewer` branch. Here is how to do it:
+`portal-components/packages/document-viewer` branch. Here is how to do it:
 
 1. Go to the `packages/document-viewer` directory inside your local clone of this repository and run
 

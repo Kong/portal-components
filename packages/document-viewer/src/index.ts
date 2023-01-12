@@ -1,10 +1,5 @@
-import type { App } from 'vue'
 import DocumentViewer from './components/DocumentViewer.vue'
 
-export default {
-  install: (app: App): void => {
-    app.component('DocumentViewer', DocumentViewer)
-  }
-}
+export default DocumentViewer
 
-export { DocumentViewer }
+export * from './types'

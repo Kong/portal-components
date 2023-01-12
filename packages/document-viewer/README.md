@@ -1,6 +1,6 @@
 # @kong/portal-document-viewer
 
-A Kong UI component for rendering the documents
+A Kong UI component for rendering markdown documents
 
 - [Features](#features)
 - [Requirements](#requirements)

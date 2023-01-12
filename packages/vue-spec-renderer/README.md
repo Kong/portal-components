@@ -1,6 +1,6 @@
 # @kong/portal-vue-spec-renderer
 
-A Kong UI component for displaying yaml and json OAS specs.
+A Kong UI component for displaying API specs
 
 - [Features](#features)
 - [Requirements](#requirements)

@@ -1,11 +1,14 @@
 {
   "name": "@kong/portal-document-viewer",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": "",
   "type": "module",
   "main": "./dist/document-viewer.umd.js",
   "module": "./dist/document-viewer.es.js",
   "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env USE_SANDBOX=true vite",
@@ -37,5 +40,8 @@
   },
   "peerDependencies": {
     "vue": "^3.2.45"
+  },  
+  "volta": {
+    "extends": "../../package.json"
   }
 }
