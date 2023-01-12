@@ -32,7 +32,7 @@ You can also run `pnpm install-autocomplete` to integrate `pnpm` autocompletion 
 Run the dev server in your `packages/{package-name}/sandbox/` directory with hot-module reload
 
 ```shell
-pnpm --filter "@kong-portal-components/{package-name}" run dev
+pnpm --filter "@kong/portal-{package-name}" run dev
 ```
 
 ### Preview sandbox build
@@ -40,7 +40,7 @@ pnpm --filter "@kong-portal-components/{package-name}" run dev
 Build your `packages/{package-name}/sandbox/` directory for production and serve locally
 
 ```shell
-pnpm --filter "@kong-portal-components/{package-name}" run preview
+pnpm --filter "@kong/portal-{package-name}" run preview
 ```
 
 ### ESLint
@@ -49,10 +49,10 @@ Lint package files
 
 ```shell
 # Lint only
-pnpm --filter "@kong-portal-components/{package-name}" run lint
+pnpm --filter "@kong/portal-{package-name}" run lint
 
 # Lint and fix
-pnpm --filter "@kong-portal-components/{package-name}" run lint:fix
+pnpm --filter "@kong/portal-{package-name}" run lint:fix
 ```
 
 ### Type Checking
@@ -60,22 +60,22 @@ pnpm --filter "@kong-portal-components/{package-name}" run lint:fix
 Type check your package
 
 ```shell
-pnpm --filter "@kong-portal-components/{package-name}" run typecheck
+pnpm --filter "@kong/portal-{package-name}" run typecheck
 ```
 
 ## Running consuming application with local copy of the package
 
-You are modifying a shared component (let's say `@kong-portal-components/document-viewer`) and you need to run 
+You are modifying a shared component (let's say `@kong/portal-{package-name}`) and you need to run 
 a consuming application (e.g. `konnect-portal`) with the current version of the code you have locally in your 
-`portal-components/packages/document-viewer` branch. Here is how to do it:
+`portal-components/packages/{package-name}` branch. Here is how to do it:
 
-1. Go to the `packages/document-viewer` directory inside your local clone of this repository and run
+1. Go to the `packages/{package-name}` directory inside your local clone of this repository and run
 
     ```shell
     yarn link
     ```
 
-1. Make sure your package is getting build in watch mode, for this in the `packages/document-viewer` directory run:
+1. Make sure your package is getting build in watch mode, for this in the `packages/{package-name}` directory run:
 
     ```shell
     pnpm build:package --watch
@@ -84,10 +84,10 @@ a consuming application (e.g. `konnect-portal`) with the current version of the 
 1. In the root directory of the consuming application (e.g. `konnect-portal`) run:
 
     ```shell
-    yarn link "@kong-portal-components/document-viewer"
+    yarn link "@kong/portal-{package-name}"
     ```
 
-1. Run your consuming application as usual and enjoy your document-viewer code changes 
+1. Run your consuming application as usual and enjoy your {package-name} code changes 
     visible in your local env immediately.
 
     ```shell
@@ -102,7 +102,7 @@ To force it you might need following changes in `vite.config.ts` of the consumin
     ```typescript
    server: {
       watch: {
-        ignored: ['!**/node_modules/@kong-portal-components/document-viewer/**']
+        ignored: ['!**/node_modules/@kong/portal-{package-name}/**']
       }
     }
     ```
@@ -111,7 +111,7 @@ To force it you might need following changes in `vite.config.ts` of the consumin
 
     ```typescript
     optimizeDeps: {
-      exclude: ['@kong-portal-components/document-viewer']
+      exclude: ['@kong/portal-{package-name}']
     }
     ```
 
@@ -119,7 +119,7 @@ To force it you might need following changes in `vite.config.ts` of the consumin
 
 And finally, when you're done working with local (linked copy) of your kong-portal-components package, unlink it:
 
-1. Go to the `packages/document-viewer` directory inside your local clone of this repository and run
+1. Go to the `packages/{package-name}` directory inside your local clone of this repository and run
 
     ```shell
     yarn unlink
@@ -128,6 +128,6 @@ And finally, when you're done working with local (linked copy) of your kong-port
 1. In the root directory of the consuming application (e.g. `konnect-portal`) run:
 
     ```shell
-    yarn unlink "@kong-portal-components/document-viewer"
+    yarn unlink "@kong/portal-{package-name}"
     yarn install --force --frozen-lockfile
     ```

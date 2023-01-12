@@ -1,6 +1,6 @@
 # @kong/portal-vue-spec-renderer
 
-A Kong UI component for displaying uuid and copying it to clipboard.
+A Kong UI component for displaying API specs
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -30,7 +30,7 @@ A Kong UI component for displaying uuid and copying it to clipboard.
 Install the component in your host application
 
 ```sh
-@kong/portal-vue-spec-renderer
+yarn add @kong/portal-vue-spec-renderer
 ```
 
 ### Register
