@@ -1,6 +1,6 @@
 # @kong/portal-vue-spec-renderer
 
-A Kong UI component for displaying uuid and copying it to clipboard.
+A Kong UI component for displaying yaml and json OAS specs.
 
 - [Features](#features)
 - [Requirements](#requirements)
