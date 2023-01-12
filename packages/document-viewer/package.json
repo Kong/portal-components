@@ -10,7 +10,6 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env USE_SANDBOX=true vite",
     "build": "run-s typecheck build:package build:types",
     "build:package": "vite build",

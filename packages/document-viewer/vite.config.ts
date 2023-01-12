@@ -1,5 +1,3 @@
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import sharedViteConfig from '../../vite.config.shared'
 import { resolve } from 'path'
 import { defineConfig, mergeConfig } from 'vite'
@@ -19,16 +17,6 @@ const config = mergeConfig(sharedViteConfig, defineConfig({
     },
   },
 }))
-
-// We need to override the provided `vue` plugin with a custom config that includes `isCustomElement`
-// If additional plugins are added to the root `vite.config.shared.ts`, you'll need to include them here as well
-const customPlugins = [
-  vue(),
-  vueJsx(),
-]
-
-// Replace the existing plugins array with our custom array
-config.plugins = customPlugins
 
 // If we are trying to preview a build of the local `package/copy-uuid/sandbox` directory,
 // unset the external and lib properties

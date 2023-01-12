@@ -30,7 +30,7 @@ A Kong UI component for displaying API specs
 Install the component in your host application
 
 ```sh
-@kong/portal-vue-spec-renderer
+yarn add @kong/portal-vue-spec-renderer
 ```
 
 ### Register

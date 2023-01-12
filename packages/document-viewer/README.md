@@ -26,7 +26,7 @@ A Kong UI component for rendering markdown documents
 Install the component in your host application
 
 ```sh
-@kong/portal-document-viewer
+yarn add @kong/portal-document-viewer
 ```
 
 ### Register
@@ -41,7 +41,7 @@ import '@kong/portal-document-viewer/dist/style.css'
 
 const app = createApp(App)
 
-app.use(VueSpecRenderer)
+app.use(DocumentViewer)
 
 ```
 
